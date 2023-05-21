@@ -79,7 +79,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Child class of Device class, represents a device operating with ROS.  
+<p>A child class of the Device class, specifically for representing a device operating with ROS.  
  <a href="classdevices_1_1Robot.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for devices.Robot:</div>
@@ -87,51 +87,46 @@ Inheritance diagram for devices.Robot:</div>
  <div class="center">
   <img src="classdevices_1_1Robot.png" usemap="#devices.Robot_map" alt=""/>
   <map id="devices.Robot_map" name="devices.Robot_map">
-<area href="classdevices_1_1Device.html" title="Class that manages the MQTT and OPC UA communication for a device." alt="devices.Device" shape="rect" coords="0,0,100,24"/>
+<area href="classdevices_1_1Device.html" title="This class represents a device in the system." alt="devices.Device" shape="rect" coords="0,0,100,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeb32e58d7ddff9df33ecd08639ba3ebe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Robot.html#aeb32e58d7ddff9df33ecd08639ba3ebe">__init__</a> (self, Optional[<a class="el" href="classbridge_1_1MqttOpcuaBridge.html">bridge.MqttOpcuaBridge</a>] bridge=None, Optional[List[Tuple[str, str]]] pubSubPairs=None)</td></tr>
-<tr class="memdesc:aeb32e58d7ddff9df33ecd08639ba3ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for Robot class.  <br /></td></tr>
-<tr class="separator:aeb32e58d7ddff9df33ecd08639ba3ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83e86757d0e8888ad1ac532e625fe7fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Robot.html#a83e86757d0e8888ad1ac532e625fe7fb">mqttCallback</a> (self, client, userdata, message)</td></tr>
-<tr class="memdesc:a83e86757d0e8888ad1ac532e625fe7fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overrides the MQTT callback function to handle ROS messages.  <br /></td></tr>
-<tr class="separator:a83e86757d0e8888ad1ac532e625fe7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4656b26113d5e8efcd1e0caf386867b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Robot.html#ad4656b26113d5e8efcd1e0caf386867b">getRosDictionaryValue</a> (self, msgToSearch, str searchKey)</td></tr>
-<tr class="memdesc:ad4656b26113d5e8efcd1e0caf386867b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches for the value of a given key in a ROS message dictionary or list of dictionaries.  <br /></td></tr>
-<tr class="separator:ad4656b26113d5e8efcd1e0caf386867b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af16009a5de6f791eea759d37ef0d1052"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Robot.html#af16009a5de6f791eea759d37ef0d1052">__init__</a> (self, Optional[<a class="el" href="classbridge_1_1MqttOpcuaBridge.html">bridge.MqttOpcuaBridge</a>] bridge=None, Optional[List[Tuple[str, str]]] pubSubPairs=None)</td></tr>
+<tr class="memdesc:af16009a5de6f791eea759d37ef0d1052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the Robot class.  <br /></td></tr>
+<tr class="separator:af16009a5de6f791eea759d37ef0d1052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdevices_1_1Device"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdevices_1_1Device')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdevices_1_1Device.html">devices.Device</a></td></tr>
 <tr class="memitem:a9ace1efa06a1d4b1aa4a560c0e818ebf inherit pub_methods_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#a9ace1efa06a1d4b1aa4a560c0e818ebf">__init__</a> (self, Optional[<a class="el" href="classbridge_1_1MqttOpcuaBridge.html">bridge.MqttOpcuaBridge</a>] bridge=None, Optional[List[Tuple[str, str]]] pubSubPairs=None, Optional[Optional[Type[<a class="el" href="classdevices_1_1OpcuaCallback.html">OpcuaCallback</a>]]] opcuaCallback=None)</td></tr>
-<tr class="memdesc:a9ace1efa06a1d4b1aa4a560c0e818ebf inherit pub_methods_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device constructor.  <br /></td></tr>
+<tr class="memdesc:a9ace1efa06a1d4b1aa4a560c0e818ebf inherit pub_methods_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor for the Device class.  <br /></td></tr>
 <tr class="separator:a9ace1efa06a1d4b1aa4a560c0e818ebf inherit pub_methods_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba1e4bc58aae2a2bcb2e1912fff95e6f inherit pub_methods_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#aba1e4bc58aae2a2bcb2e1912fff95e6f">asyncInit</a> (self)</td></tr>
-<tr class="memdesc:aba1e4bc58aae2a2bcb2e1912fff95e6f inherit pub_methods_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the device asynchronously by setting the publisher/subscriber pairs.  <br /></td></tr>
-<tr class="separator:aba1e4bc58aae2a2bcb2e1912fff95e6f inherit pub_methods_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b2fd219fa1597dda9232c1806703f16 inherit pub_methods_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#a9b2fd219fa1597dda9232c1806703f16">setPubSubPairs</a> (self, Optional[List[Tuple[str, str]]] newPubSubPairs=None)</td></tr>
-<tr class="memdesc:a9b2fd219fa1597dda9232c1806703f16 inherit pub_methods_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the publisher/subscriber pairs for the device.  <br /></td></tr>
-<tr class="separator:a9b2fd219fa1597dda9232c1806703f16 inherit pub_methods_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a443598ff3afb78cbf5cd162861ea7309 inherit pub_methods_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#a443598ff3afb78cbf5cd162861ea7309">setBridge</a> (self, newBridge)</td></tr>
-<tr class="memdesc:a443598ff3afb78cbf5cd162861ea7309 inherit pub_methods_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the bridge between MQTT and OPC UA for the device.  <br /></td></tr>
-<tr class="separator:a443598ff3afb78cbf5cd162861ea7309 inherit pub_methods_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc6a7bbb639ef65b6302e78b57e2c734 inherit pub_methods_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#abc6a7bbb639ef65b6302e78b57e2c734">getBridge</a> (self)</td></tr>
-<tr class="separator:abc6a7bbb639ef65b6302e78b57e2c734 inherit pub_methods_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa21e8345620bc67cca097f3c81d52398 inherit pub_methods_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#aa21e8345620bc67cca097f3c81d52398">typecastForNode</a> (self, node, payload)</td></tr>
-<tr class="memdesc:aa21e8345620bc67cca097f3c81d52398 inherit pub_methods_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typecasts the message payload appropriately based on the data type of the OPC UA node receiving it.  <br /></td></tr>
-<tr class="separator:aa21e8345620bc67cca097f3c81d52398 inherit pub_methods_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf1f5b6ec85f91c2a8494854c5c4f0ab inherit pub_methods_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#acf1f5b6ec85f91c2a8494854c5c4f0ab">mqttCallback</a> (self, client, userdata, message)</td></tr>
-<tr class="memdesc:acf1f5b6ec85f91c2a8494854c5c4f0ab inherit pub_methods_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles MQTT messages.  <br /></td></tr>
-<tr class="separator:acf1f5b6ec85f91c2a8494854c5c4f0ab inherit pub_methods_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a92646795c5c52dd27377f793a0e976 inherit pub_methods_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#a9a92646795c5c52dd27377f793a0e976">asyncInit</a> (self)</td></tr>
+<tr class="memdesc:a9a92646795c5c52dd27377f793a0e976 inherit pub_methods_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous initialisation method for the device.  <br /></td></tr>
+<tr class="separator:a9a92646795c5c52dd27377f793a0e976 inherit pub_methods_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab457352c269b917f81760e6d4b1a8d5f inherit pub_methods_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#ab457352c269b917f81760e6d4b1a8d5f">setPubSubPairs</a> (self, Optional[List[Tuple[str, str]]] newPubSubPairs=None)</td></tr>
+<tr class="separator:ab457352c269b917f81760e6d4b1a8d5f inherit pub_methods_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d21b3600206e195d0af8faccde22545 inherit pub_methods_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#a9d21b3600206e195d0af8faccde22545">setBridge</a> (self, newBridge)</td></tr>
+<tr class="memdesc:a9d21b3600206e195d0af8faccde22545 inherit pub_methods_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter method for the bridge attribute.  <br /></td></tr>
+<tr class="separator:a9d21b3600206e195d0af8faccde22545 inherit pub_methods_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad39a8cad6c2db691ba522494403d1bea inherit pub_methods_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#ad39a8cad6c2db691ba522494403d1bea">getPubSubPairs</a> (self)</td></tr>
+<tr class="memdesc:ad39a8cad6c2db691ba522494403d1bea inherit pub_methods_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter method for the pubSubPairs attribute.  <br /></td></tr>
+<tr class="separator:ad39a8cad6c2db691ba522494403d1bea inherit pub_methods_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba01c177556908651179fb8a6854d4b0 inherit pub_methods_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#aba01c177556908651179fb8a6854d4b0">getBridge</a> (self)</td></tr>
+<tr class="memdesc:aba01c177556908651179fb8a6854d4b0 inherit pub_methods_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter method for the bridge attribute.  <br /></td></tr>
+<tr class="separator:aba01c177556908651179fb8a6854d4b0 inherit pub_methods_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20efc69b398b0237201f5008f100b00 inherit pub_methods_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#ad20efc69b398b0237201f5008f100b00">typecastForNode</a> (self, node, payload)</td></tr>
+<tr class="memdesc:ad20efc69b398b0237201f5008f100b00 inherit pub_methods_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for typecasting MQTT payloads to OPC UA node data types.  <br /></td></tr>
+<tr class="separator:ad20efc69b398b0237201f5008f100b00 inherit pub_methods_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a408b3059ed552216f535b4b4e1593848 inherit pub_methods_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#a408b3059ed552216f535b4b4e1593848">mqttCallback</a> (self, client, userdata, message)</td></tr>
+<tr class="memdesc:a408b3059ed552216f535b4b4e1593848 inherit pub_methods_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for MQTT messages.  <br /></td></tr>
+<tr class="separator:a408b3059ed552216f535b4b4e1593848 inherit pub_methods_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classdevices_1_1Device"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classdevices_1_1Device')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classdevices_1_1Device.html">devices.Device</a></td></tr>
 <tr class="memitem:aae10e8b0d85c0acd1a3b7219e1b25c22 inherit pro_attribs_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#aae10e8b0d85c0acd1a3b7219e1b25c22">_bridge</a></td></tr>
-<tr class="memdesc:aae10e8b0d85c0acd1a3b7219e1b25c22 inherit pro_attribs_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">The bridge between MQTT and OPC UA for the device.  <br /></td></tr>
 <tr class="separator:aae10e8b0d85c0acd1a3b7219e1b25c22 inherit pro_attribs_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab7c11214ed415c2b3a9b6743b70748c inherit pro_attribs_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#aab7c11214ed415c2b3a9b6743b70748c">_pubSubPairs</a></td></tr>
-<tr class="memdesc:aab7c11214ed415c2b3a9b6743b70748c inherit pro_attribs_classdevices_1_1Device"><td class="mdescLeft">&#160;</td><td class="mdescRight">The dictionary of publisher/subscriber pairs for MQTT topics and OPC UA nodes.  <br /></td></tr>
 <tr class="separator:aab7c11214ed415c2b3a9b6743b70748c inherit pro_attribs_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dce312a5ea52b0a1f57ae4195d292d1 inherit pro_attribs_classdevices_1_1Device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1Device.html#a6dce312a5ea52b0a1f57ae4195d292d1">_opcuaCallback</a></td></tr>
 <tr class="separator:a6dce312a5ea52b0a1f57ae4195d292d1 inherit pro_attribs_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,13 +134,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aca9b4160d4f0b423714e6eec78dca3c8 inherit pro_attribs_classdevices_1_1Device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Child class of Device class, represents a device operating with ROS. </p>
-<p>Inherits from the Device class and overrides the mqttCallback function to handle ROS messages. </p>
+<div class="textblock"><p>A child class of the Device class, specifically for representing a device operating with ROS. </p>
 
-<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00120">120</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00183">183</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aeb32e58d7ddff9df33ecd08639ba3ebe" name="aeb32e58d7ddff9df33ecd08639ba3ebe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb32e58d7ddff9df33ecd08639ba3ebe">&#9670;&#160;</a></span>__init__()</h2>
+<a id="af16009a5de6f791eea759d37ef0d1052" name="af16009a5de6f791eea759d37ef0d1052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af16009a5de6f791eea759d37ef0d1052">&#9670;&#160;</a></span>__init__()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,131 +170,79 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor for Robot class. </p>
+<p>Initializes a new instance of the Robot class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bridge</td><td>An optional parameter of bridge between MQTT and OPC UA for the device. </td></tr>
-    <tr><td class="paramname">pubSubPairs</td><td>An optional parameter of list of tuples for publisher and subscriber pairs for the device. </td></tr>
+    <tr><td class="paramname">bridge</td><td>The MQTT-OPC UA bridge for communication between ROS and OPC UA. </td></tr>
+    <tr><td class="paramname">pubSubPairs</td><td>The list of publisher-subscriber pairs for mapping ROS topics to OPC UA nodes. </td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classdevices_1_1Device.html#a9ace1efa06a1d4b1aa4a560c0e818ebf">devices.Device</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00126">126</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>    <span class="keyword">def </span>__init__(self, bridge: Optional[<a class="code hl_class" href="classbridge_1_1MqttOpcuaBridge.html">bridge.MqttOpcuaBridge</a>] = <span class="keywordtype">None</span>, pubSubPairs: Optional[List[Tuple[str, str]]] = <span class="keywordtype">None</span>):</div>
-<div class="line"><span class="lineno">  127</span>        <span class="comment"># ...omitted for brevity...</span></div>
-<div class="line"><span class="lineno">  128</span> </div>
-<div class="ttc" id="aclassbridge_1_1MqttOpcuaBridge_html"><div class="ttname"><a href="classbridge_1_1MqttOpcuaBridge.html">bridge.MqttOpcuaBridge</a></div><div class="ttdoc">This class acts as a bridge for an OPC UA and MQTT client pair.</div><div class="ttdef"><b>Definition:</b> <a href="classbridge_1_1MqttOpcuaBridge.html#l00009">bridge.py:9</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad4656b26113d5e8efcd1e0caf386867b" name="ad4656b26113d5e8efcd1e0caf386867b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4656b26113d5e8efcd1e0caf386867b">&#9670;&#160;</a></span>getRosDictionaryValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">devices.Robot.getRosDictionaryValue </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>msgToSearch</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">str&#160;</td>
-          <td class="paramname"><em>searchKey</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Searches for the value of a given key in a ROS message dictionary or list of dictionaries. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">msgToSearch</td><td>The ROS message dictionary or list of dictionaries to be searched. </td></tr>
-    <tr><td class="paramname">searchKey</td><td>The key to search for in the dictionary or list of dictionaries. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The value of the key in the dictionary or list of dictionaries. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00142">142</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>    <span class="keyword">def </span>getRosDictionaryValue(self, msgToSearch, searchKey: str):</div>
-<div class="line"><span class="lineno">  143</span>        <span class="comment"># ...omitted for brevity...</span></div>
-<div class="line"><span class="lineno">  144</span> </div>
-<div class="line"><span class="lineno">  145</span> </div>
-<div class="line"><span class="lineno">  146</span> </div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a83e86757d0e8888ad1ac532e625fe7fb" name="a83e86757d0e8888ad1ac532e625fe7fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83e86757d0e8888ad1ac532e625fe7fb">&#9670;&#160;</a></span>mqttCallback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">devices.Robot.mqttCallback </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>client</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>userdata</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Overrides the MQTT callback function to handle ROS messages. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">client</td><td>The MQTT client that the message was sent to. </td></tr>
-    <tr><td class="paramname">userdata</td><td>User-defined data of any type that is passed as the argument to the callback function. </td></tr>
-    <tr><td class="paramname">message</td><td>The MQTT message that was received. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="classdevices_1_1Device.html#acf1f5b6ec85f91c2a8494854c5c4f0ab">devices.Device</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00134">134</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  134</span>    <span class="keyword">def </span>mqttCallback(self, client, userdata, message):</div>
-<div class="line"><span class="lineno">  135</span>        <span class="comment"># ...omitted for brevity...</span></div>
-<div class="line"><span class="lineno">  136</span>        </div>
+<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00187">187</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  187</span>    <span class="keyword">def </span>__init__(self, bridge: Optional[<a class="code hl_class" href="classbridge_1_1MqttOpcuaBridge.html">bridge.MqttOpcuaBridge</a>] = <span class="keywordtype">None</span>, pubSubPairs: Optional[List[Tuple[str, str]]] = <span class="keywordtype">None</span>):</div>
+<div class="line"><span class="lineno">  188</span>        super().__init__(bridge, pubSubPairs, RosOpcuaCallback(self))</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span> </div>
+<div class="line"><span class="lineno">  191</span>        <span class="keyword">def </span>mqttCallback(self, client, userdata, message):</div>
+<div class="line"><span class="lineno">  192</span>        </div>
+<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">try</span>:    </div>
+<div class="line"><span class="lineno">  197</span>            opcuaNodes = self._pubSubPairs[message.topic] </div>
+<div class="line"><span class="lineno">  198</span>            rosMsgDict = msgpack.unpackb(message.payload, raw=<span class="keyword">False</span>) </div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span>            print(f<span class="stringliteral">&#39;Received ROS message on topic {message.topic}:&#39;</span>)  </div>
+<div class="line"><span class="lineno">  201</span>            <span class="keywordflow">for</span> node <span class="keywordflow">in</span> opcuaNodes:</div>
+<div class="line"><span class="lineno">  202</span>                <span class="comment"># keyPath = [x.lower() for x in re.split(r&#39;(?=[A-Z])&#39;, &quot;status_listStatus&quot;)] # Takes the OPC UA node name and splits it into a list of parts, each representing a subdictionary within the corresponding ROS message. Makes it possible to differentiate between two keys of the same name but within different parts of a message. Separator is a uppercase letter since ROS messages use &#39;-&#39; within names and NxTTech will not accept any other special characters in node names.</span></div>
+<div class="line"><span class="lineno">  203</span>                keyPath = [x.lower() <span class="keywordflow">for</span> x <span class="keywordflow">in</span> re.split(<span class="stringliteral">r&#39;(?=[A-Z])&#39;</span>, node[<span class="stringliteral">&quot;name&quot;</span>])] <span class="comment"># Takes the OPC UA node name and splits it into a list of parts, each representing a subdictionary within the corresponding ROS message. Makes it possible to differentiate between two keys of the same name but within different parts of a message. Separator is a uppercase letter since ROS messages use &#39;-&#39; within names and NxTTech will not accept any other special characters in node names.</span></div>
+<div class="line"><span class="lineno">  204</span>                containerToSearch = rosMsgDict</div>
+<div class="line"><span class="lineno">  205</span>                <span class="keywordflow">for</span> searchTerm <span class="keywordflow">in</span> keyPath: <span class="comment"># Finds the value key pair in the ROS message dictionary received.</span></div>
+<div class="line"><span class="lineno">  206</span>                    <span class="keywordflow">if</span> searchTerm == <span class="stringliteral">&quot;std_msgs&quot;</span>:</div>
+<div class="line"><span class="lineno">  207</span>                        key, hit = <span class="stringliteral">&quot;data&quot;</span>, containerToSearch[<span class="stringliteral">&#39;data&#39;</span>]</div>
+<div class="line"><span class="lineno">  208</span>                        <span class="keywordflow">break</span></div>
+<div class="line"><span class="lineno">  209</span>                    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  210</span>                        containerToSearch = self.getRosDictionaryValue(containerToSearch, searchTerm)</div>
+<div class="line"><span class="lineno">  211</span>                        key, hit = searchTerm, containerToSearch</div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>                print(f<span class="stringliteral">&#39;Publishing {key} = {hit} to node: {node[&quot;name&quot;]}\n&#39;</span>)</div>
+<div class="line"><span class="lineno">  214</span> </div>
+<div class="line"><span class="lineno">  215</span>                payloadValue = super().typecastForNode(node, hit)              </div>
+<div class="line"><span class="lineno">  216</span>                variantFormattedPayload = ua.DataValue(ua.Variant(payloadValue, node[<span class="stringliteral">&quot;variantType&quot;</span>]))</div>
+<div class="line"><span class="lineno">  217</span>                <span class="comment">#DOUBLE CHECK BELOW, should self._loop work?</span></div>
+<div class="line"><span class="lineno">  218</span>                self._loop.create_task(node[<span class="stringliteral">&quot;node&quot;</span>].write_value(variantFormattedPayload)) <span class="comment"># Create a task in the current event loop that writes the correctly formatted message to each associated subscribing OPC UA node iterated through.</span></div>
+<div class="line"><span class="lineno">  219</span>        </div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">except</span> ValueError:</div>
+<div class="line"><span class="lineno">  221</span>            print(<span class="stringliteral">&quot;Error: Could not convert payload to appropriate type&quot;</span>)</div>
+<div class="line"><span class="lineno">  222</span>            <span class="keywordflow">return</span></div>
+<div class="line"><span class="lineno">  223</span> </div>
+<div class="line"><span class="lineno">  224</span>        </div>
+<div class="line"><span class="lineno">  225</span>       <span class="keyword">def </span>getRosDictionaryValue(self, msgToSearch, searchKey: str):</div>
+<div class="line"><span class="lineno">  226</span>        </div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">if</span> isinstance(msgToSearch, list) <span class="keywordflow">and</span> all(isinstance(item, dict) <span class="keywordflow">for</span> item <span class="keywordflow">in</span> msgToSearch):</div>
+<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">for</span> dictionary <span class="keywordflow">in</span> msgToSearch:</div>
+<div class="line"><span class="lineno">  232</span>                <span class="keywordflow">for</span> key, entry <span class="keywordflow">in</span> dictionary.items():    </div>
+<div class="line"><span class="lineno">  233</span>                    <span class="keywordflow">if</span> key == searchKey:</div>
+<div class="line"><span class="lineno">  234</span>                        <span class="keywordflow">return</span> entry</div>
+<div class="line"><span class="lineno">  235</span>                    <span class="keywordflow">if</span> isinstance(entry, dict) <span class="keywordflow">or</span> (isinstance(entry, list) <span class="keywordflow">and</span> all(isinstance(item, dict) <span class="keywordflow">for</span> item <span class="keywordflow">in</span> entry)):</div>
+<div class="line"><span class="lineno">  236</span>                        result = self.getRosDictionaryValue(entry, searchKey)</div>
+<div class="line"><span class="lineno">  237</span>                        <span class="keywordflow">if</span> result <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><span class="lineno">  238</span>                            <span class="keywordflow">return</span> result</div>
+<div class="line"><span class="lineno">  239</span>            </div>
+<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">elif</span> isinstance(msgToSearch, dict):</div>
+<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">for</span> key, entry <span class="keywordflow">in</span> msgToSearch.items():    </div>
+<div class="line"><span class="lineno">  242</span>                <span class="keywordflow">if</span> key == searchKey:</div>
+<div class="line"><span class="lineno">  243</span>                    <span class="keywordflow">return</span> entry</div>
+<div class="line"><span class="lineno">  244</span>                <span class="keywordflow">if</span> isinstance(entry, dict) <span class="keywordflow">or</span> (isinstance(entry, list) <span class="keywordflow">and</span> all(isinstance(item, dict) <span class="keywordflow">for</span> item <span class="keywordflow">in</span> entry)):</div>
+<div class="line"><span class="lineno">  245</span>                    result = self.getRosDictionaryValue(entry, searchKey)</div>
+<div class="line"><span class="lineno">  246</span>                    <span class="keywordflow">if</span> result <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><span class="lineno">  247</span>                        <span class="keywordflow">return</span> result</div>
+<div class="line"><span class="lineno">  248</span> </div>
+<div class="line"><span class="lineno">  249</span> </div>
+<div class="line"><span class="lineno">  250</span> </div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span> </div>
+<div class="ttc" id="aclassbridge_1_1MqttOpcuaBridge_html"><div class="ttname"><a href="classbridge_1_1MqttOpcuaBridge.html">bridge.MqttOpcuaBridge</a></div><div class="ttdoc">This class acts as a bridge between an OPC UA and MQTT client pair.</div><div class="ttdef"><b>Definition:</b> <a href="classbridge_1_1MqttOpcuaBridge.html#l00003">bridge.py:3</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

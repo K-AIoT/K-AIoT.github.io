@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['_5f_5finit_5f_5f_0',['__init__',['../classbridge_1_1MqttOpcuaBridge.html#afba2d07a871b255b806b7c83633c1cae',1,'bridge.MqttOpcuaBridge.__init__()'],['../classdevices_1_1OpcuaCallback.html#ae268ba9fa95d6d77c2adf50613ab9cf1',1,'devices.OpcuaCallback.__init__()'],['../classdevices_1_1Device.html#a9ace1efa06a1d4b1aa4a560c0e818ebf',1,'devices.Device.__init__()'],['../classdevices_1_1Robot.html#aeb32e58d7ddff9df33ecd08639ba3ebe',1,'devices.Robot.__init__()'],['../classdevices_1_1RosOpcuaCallback.html#a085c60f7bcda10db7c1344f50e461ef5',1,'devices.RosOpcuaCallback.__init__()']]],
+  ['_5f_5finit_5f_5f_0',['__init__',['../classbridge_1_1MqttOpcuaBridge.html#afba2d07a871b255b806b7c83633c1cae',1,'bridge.MqttOpcuaBridge.__init__()'],['../classdevices_1_1OpcuaCallback.html#ae268ba9fa95d6d77c2adf50613ab9cf1',1,'devices.OpcuaCallback.__init__()'],['../classdevices_1_1Device.html#a9ace1efa06a1d4b1aa4a560c0e818ebf',1,'devices.Device.__init__()'],['../classdevices_1_1Robot.html#af16009a5de6f791eea759d37ef0d1052',1,'devices.Robot.__init__()'],['../classdevices_1_1RosOpcuaCallback.html#a8c5bc288785825b05047e3454231c2ec',1,'devices.RosOpcuaCallback.__init__()']]],
   ['_5fbridge_1',['_bridge',['../classdevices_1_1Device.html#aae10e8b0d85c0acd1a3b7219e1b25c22',1,'devices::Device']]],
   ['_5fdevice_2',['_device',['../classdevices_1_1OpcuaCallback.html#afc54559cc9a756823483af0ca472c359',1,'devices::OpcuaCallback']]],
   ['_5floop_3',['_loop',['../classdevices_1_1Device.html#aca9b4160d4f0b423714e6eec78dca3c8',1,'devices::Device']]],

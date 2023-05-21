@@ -81,7 +81,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>This script connects an ESP8266 module to a WiFi network and MQTT server.  
+<p>Control a DC motor based on humidity data from a DHT22 sensor, with data published via MQTT.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;ESP8266WiFi.h&gt;</code><br />
 <code>#include &lt;PubSubClient.h&gt;</code><br />
@@ -92,6 +92,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a2c509dba12bba99883a5be9341b7a0c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a2c509dba12bba99883a5be9341b7a0c5">DHTTYPE</a>&#160;&#160;&#160;DHT22</td></tr>
+<tr class="memdesc:a2c509dba12bba99883a5be9341b7a0c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">DHT Sensor type (DHT22 in this case)  <br /></td></tr>
 <tr class="separator:a2c509dba12bba99883a5be9341b7a0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -101,39 +102,57 @@ Functions</h2></td></tr>
 <tr class="memitem:a954e8d8deb756924c12914cc3cffe82e"><td class="memItemLeft" align="right" valign="top">DHT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a954e8d8deb756924c12914cc3cffe82e">dht</a> (<a class="el" href="dht22_8ino.html#a36c07f4bebe4701d1682b3691a72307b">DHTPin</a>, <a class="el" href="dht22_8ino.html#a2c509dba12bba99883a5be9341b7a0c5">DHTTYPE</a>)</td></tr>
 <tr class="separator:a954e8d8deb756924c12914cc3cffe82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
+<tr class="memdesc:a4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arduino's setup function, executed once at the start of the program.  <br /></td></tr>
 <tr class="separator:a4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+<tr class="memdesc:afe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main function that is continuously looped after setup.  <br /></td></tr>
 <tr class="separator:afe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b7714f6c4c5df030469774106f9584f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a0b7714f6c4c5df030469774106f9584f">changeSpeed</a> (int <a class="el" href="humidityDCmotor_8ino.html#a218b4f7c6cc2681a99c23a3b089d68b1">speed</a>)</td></tr>
+<tr class="memdesc:a0b7714f6c4c5df030469774106f9584f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the speed of the motor based on the input value.  <br /></td></tr>
 <tr class="separator:a0b7714f6c4c5df030469774106f9584f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeab2f678ad886fb7a6c48a77ce97d410"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#aeab2f678ad886fb7a6c48a77ce97d410">callback</a> (char *topic, byte *message, unsigned int length)</td></tr>
+<tr class="memdesc:aeab2f678ad886fb7a6c48a77ce97d410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the incoming messages on the subscribed MQTT topics.  <br /></td></tr>
 <tr class="separator:aeab2f678ad886fb7a6c48a77ce97d410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5b88d967e3185d98053cf055c8b4f1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#ae5b88d967e3185d98053cf055c8b4f1f">setup_wifi</a> ()</td></tr>
+<tr class="memdesc:ae5b88d967e3185d98053cf055c8b4f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects the ESP8266 to the specified WiFi network.  <br /></td></tr>
 <tr class="separator:ae5b88d967e3185d98053cf055c8b4f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bcd6ce7d04c38f8c4ff908d1fc50f86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a4bcd6ce7d04c38f8c4ff908d1fc50f86">reconnect</a> ()</td></tr>
+<tr class="memdesc:a4bcd6ce7d04c38f8c4ff908d1fc50f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconnects to the MQTT broker if the client is not currently connected.  <br /></td></tr>
 <tr class="separator:a4bcd6ce7d04c38f8c4ff908d1fc50f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a587ba0cb07f02913598610049a3bbb79"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a587ba0cb07f02913598610049a3bbb79">ssid</a> = &quot;NTGR_E495&quot;</td></tr>
+<tr class="memdesc:a587ba0cb07f02913598610049a3bbb79"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSID of your WiFi network.  <br /></td></tr>
 <tr class="separator:a587ba0cb07f02913598610049a3bbb79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4a2ebcb494493f648ae1e6975672575"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#aa4a2ebcb494493f648ae1e6975672575">password</a> = &quot;L9j29iAU&quot;</td></tr>
+<tr class="memdesc:aa4a2ebcb494493f648ae1e6975672575"><td class="mdescLeft">&#160;</td><td class="mdescRight">Password of your WiFi network.  <br /></td></tr>
 <tr class="separator:aa4a2ebcb494493f648ae1e6975672575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e20c6ce55a404e1725f43210525b3bc"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a8e20c6ce55a404e1725f43210525b3bc">MQTT_username</a> = &quot;kaiot&quot;</td></tr>
+<tr class="memdesc:a8e20c6ce55a404e1725f43210525b3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">MQTT username.  <br /></td></tr>
 <tr class="separator:a8e20c6ce55a404e1725f43210525b3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a561386b8c64656896f88a2e34c58dfe3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a561386b8c64656896f88a2e34c58dfe3">MQTT_password</a> = &quot;kebabsjappe&quot;</td></tr>
+<tr class="memdesc:a561386b8c64656896f88a2e34c58dfe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">MQTT password.  <br /></td></tr>
 <tr class="separator:a561386b8c64656896f88a2e34c58dfe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae62fa8557ef4586408dcbe2f1a09e839"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#ae62fa8557ef4586408dcbe2f1a09e839">mqtt_server</a> = &quot;192.168.1.22&quot;</td></tr>
+<tr class="memdesc:ae62fa8557ef4586408dcbe2f1a09e839"><td class="mdescLeft">&#160;</td><td class="mdescRight">MQTT server IP address.  <br /></td></tr>
 <tr class="separator:ae62fa8557ef4586408dcbe2f1a09e839"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd77e757e4b3bb6f1e4b42b21ea9e040"><td class="memItemLeft" align="right" valign="top">WiFiClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#abd77e757e4b3bb6f1e4b42b21ea9e040">espClient</a></td></tr>
 <tr class="separator:abd77e757e4b3bb6f1e4b42b21ea9e040"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af13035dfeda2b2c70d012954b5729697"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#af13035dfeda2b2c70d012954b5729697">ENA</a> = D7</td></tr>
+<tr class="memdesc:af13035dfeda2b2c70d012954b5729697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pin connected to Enable pin of the motor driver, controls speed.  <br /></td></tr>
 <tr class="separator:af13035dfeda2b2c70d012954b5729697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0486a9bf56d6a6492727a781ab493a36"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a0486a9bf56d6a6492727a781ab493a36">IN1</a> = D1</td></tr>
+<tr class="memdesc:a0486a9bf56d6a6492727a781ab493a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pin connected to Input1 of the motor driver for directional control.  <br /></td></tr>
 <tr class="separator:a0486a9bf56d6a6492727a781ab493a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b2bd4ae2c057b356d5ba7ab23cb5a86"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a6b2bd4ae2c057b356d5ba7ab23cb5a86">IN2</a> = D2</td></tr>
+<tr class="memdesc:a6b2bd4ae2c057b356d5ba7ab23cb5a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pin connected to Input2 of the motor driver for directional control.  <br /></td></tr>
 <tr class="separator:a6b2bd4ae2c057b356d5ba7ab23cb5a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc085aeaaec657b48a2e349e1aa85be"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a1dc085aeaaec657b48a2e349e1aa85be">analogPin</a> = A0</td></tr>
+<tr class="memdesc:a1dc085aeaaec657b48a2e349e1aa85be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analog input pin for optional sensor.  <br /></td></tr>
+<tr class="separator:a1dc085aeaaec657b48a2e349e1aa85be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36c07f4bebe4701d1682b3691a72307b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a36c07f4bebe4701d1682b3691a72307b">DHTPin</a> = D4</td></tr>
+<tr class="memdesc:a36c07f4bebe4701d1682b3691a72307b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Digital pin connected to DHT sensor's data pin.  <br /></td></tr>
 <tr class="separator:a36c07f4bebe4701d1682b3691a72307b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac50fcb4128442a2ca0c5793a8f13ab2a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#ac50fcb4128442a2ca0c5793a8f13ab2a">humidityPub</a> = 0</td></tr>
 <tr class="separator:ac50fcb4128442a2ca0c5793a8f13ab2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,15 +160,23 @@ Variables</h2></td></tr>
 <tr class="separator:a4719769774141db5a34f8cd737230e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a218b4f7c6cc2681a99c23a3b089d68b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a218b4f7c6cc2681a99c23a3b089d68b1">speed</a> = 0</td></tr>
 <tr class="separator:a218b4f7c6cc2681a99c23a3b089d68b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ef90926c9a05dcb1b2fac4a9655e546"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a0ef90926c9a05dcb1b2fac4a9655e546">now</a> = millis()</td></tr>
-<tr class="separator:a0ef90926c9a05dcb1b2fac4a9655e546"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a70c9a32012cf238eaf48a9e52613e5"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a7a70c9a32012cf238eaf48a9e52613e5">lastMeasure</a> = 0</td></tr>
-<tr class="separator:a7a70c9a32012cf238eaf48a9e52613e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f84c5196bb115c5339065e03aa6651"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#ae6f84c5196bb115c5339065e03aa6651">now1</a> = millis()</td></tr>
+<tr class="separator:ae6f84c5196bb115c5339065e03aa6651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af06539f0de1d30792a0e62f2142cba5f"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#af06539f0de1d30792a0e62f2142cba5f">now2</a> = millis()</td></tr>
+<tr class="separator:af06539f0de1d30792a0e62f2142cba5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a133e48c7775c8b7b3fb2e12278f6b4dd"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a133e48c7775c8b7b3fb2e12278f6b4dd">lastMeasure1</a> = 0</td></tr>
+<tr class="separator:a133e48c7775c8b7b3fb2e12278f6b4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93b16ea1a0cf6b2ce9cb005b0b2d7ade"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#a93b16ea1a0cf6b2ce9cb005b0b2d7ade">lastMeasure2</a> = 0</td></tr>
+<tr class="separator:a93b16ea1a0cf6b2ce9cb005b0b2d7ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdba3929cfab1b5aff2bde4688bd3ff2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="humidityDCmotor_8ino.html#afdba3929cfab1b5aff2bde4688bd3ff2">digitalVoltage</a> = 0</td></tr>
+<tr class="memdesc:afdba3929cfab1b5aff2bde4688bd3ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable to hold the voltage read from the digital pin.  <br /></td></tr>
+<tr class="separator:afdba3929cfab1b5aff2bde4688bd3ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This script connects an ESP8266 module to a WiFi network and MQTT server. </p>
-<p>It reads temperature and humidity data from a DHT sensor and controls a DC motor's speed based on received MQTT messages. </p><dl class="section author"><dt>Author</dt><dd>Your Name </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2023-05-20 </dd></dl>
+<div class="textblock"><p>Control a DC motor based on humidity data from a DHT22 sensor, with data published via MQTT. </p>
+<dl class="section author"><dt>Author</dt><dd>YourName </dd></dl>
+<p>This Arduino sketch is used to control the speed of a DC motor depending on the humidity levels detected by a DHT22 sensor. The humidity data is also published to a MQTT broker.</p>
+<p>The sketch is configured to work with an ESP8266, and it uses the PubSubClient library for MQTT communication and the DHT sensor library for interacting with the DHT22 sensor. </p>
 
 <p class="definition">Definition in file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -165,7 +192,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00013">13</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p>DHT Sensor type (DHT22 in this case) </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00017">17</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
@@ -202,10 +231,39 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00076">76</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>                                                               {</div>
-<div class="line"><span class="lineno">   77</span>  <span class="comment">//...omitted for brevity...</span></div>
-<div class="line"><span class="lineno">   78</span>}</div>
+<p>Handles the incoming messages on the subscribed MQTT topics. </p>
+<p>This function is executed whenever a message is received on the subscribed MQTT topics. It prints the received message to the Serial monitor and checks if the topic is "dry/speed". If it is, it changes the speed of the motor based on the received message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">topic</td><td>The topic on which the message is received. </td></tr>
+    <tr><td class="paramname">message</td><td>The received message. </td></tr>
+    <tr><td class="paramname">length</td><td>The length of the received message. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The function will convert the speed message from string to int and call the function changeSpeed to change the speed of the motor. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00170">170</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  170</span>                                                               {</div>
+<div class="line"><span class="lineno">  171</span>  Serial.print(<span class="stringliteral">&quot;Message arrived on topic: &quot;</span>);</div>
+<div class="line"><span class="lineno">  172</span>  Serial.print(topic);</div>
+<div class="line"><span class="lineno">  173</span>  Serial.print(<span class="stringliteral">&quot;. Message: &quot;</span>);</div>
+<div class="line"><span class="lineno">  174</span>  String msg;</div>
+<div class="line"><span class="lineno">  175</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; length; i++) {</div>
+<div class="line"><span class="lineno">  176</span>    Serial.print((<span class="keywordtype">char</span>)message[i]);</div>
+<div class="line"><span class="lineno">  177</span>    msg += (char)message[i];</div>
+<div class="line"><span class="lineno">  178</span>  }  <span class="comment">// the input string</span></div>
+<div class="line"><span class="lineno">  179</span>  Serial.println();</div>
+<div class="line"><span class="lineno">  180</span>  <span class="keywordflow">if</span> (strcmp(topic, <span class="stringliteral">&quot;dry/speed&quot;</span>) == 0) {  <span class="comment">// if the message is from the right topic</span></div>
+<div class="line"><span class="lineno">  181</span>    Serial.print(<span class="stringliteral">&quot;The current motor output is &quot;</span>);</div>
+<div class="line"><span class="lineno">  182</span>    Serial.println(msg);</div>
+<div class="line"><span class="lineno">  183</span>    <a class="code hl_variable" href="humidityDCmotor_8ino.html#a218b4f7c6cc2681a99c23a3b089d68b1">speed</a> = msg.toInt();  <span class="comment">// converts speed message from string to int</span></div>
+<div class="line"><span class="lineno">  184</span>    <a class="code hl_function" href="humidityDCmotor_8ino.html#a0b7714f6c4c5df030469774106f9584f">changeSpeed</a>(<a class="code hl_variable" href="humidityDCmotor_8ino.html#a218b4f7c6cc2681a99c23a3b089d68b1">speed</a>);   <span class="comment">// changes speed if the message was from the right topic</span></div>
+<div class="line"><span class="lineno">  185</span>  }</div>
+<div class="line"><span class="lineno">  186</span>  Serial.println();</div>
+<div class="line"><span class="lineno">  187</span>}</div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_a0b7714f6c4c5df030469774106f9584f"><div class="ttname"><a href="humidityDCmotor_8ino.html#a0b7714f6c4c5df030469774106f9584f">changeSpeed</a></div><div class="ttdeci">void changeSpeed(int speed)</div><div class="ttdoc">Changes the speed of the motor based on the input value.</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00149">humidityDCmotor.ino:149</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_a218b4f7c6cc2681a99c23a3b089d68b1"><div class="ttname"><a href="humidityDCmotor_8ino.html#a218b4f7c6cc2681a99c23a3b089d68b1">speed</a></div><div class="ttdeci">int speed</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00044">humidityDCmotor.ino:44</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -225,10 +283,26 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00065">65</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                            {</div>
-<div class="line"><span class="lineno">   66</span>  <span class="comment">//...omitted for brevity...</span></div>
-<div class="line"><span class="lineno">   67</span>}</div>
+<p>Changes the speed of the motor based on the input value. </p>
+<p>This function changes the speed of the motor based on an integer speed value passed in as a parameter. It also ensures the direction of the motor, in case it is switched later, and writes the speed to the ENA (Enable Pin A for Motor Driver) pin on the motor driver using PWM signal.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">speed</td><td>The desired speed value for the motor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The function will output a verification message to the serial monitor: "Jeg snurrer" (I'm spinning). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00149">149</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>                            {</div>
+<div class="line"><span class="lineno">  150</span>  Serial.println(<span class="stringliteral">&quot;Jeg snurrer&quot;</span>);  <span class="comment">// just to verify the function is called</span></div>
+<div class="line"><span class="lineno">  151</span>  digitalWrite(<a class="code hl_variable" href="humidityDCmotor_8ino.html#a0486a9bf56d6a6492727a781ab493a36">IN1</a>, HIGH);        <span class="comment">//ensure direction, in case it is switched later</span></div>
+<div class="line"><span class="lineno">  152</span>  digitalWrite(<a class="code hl_variable" href="humidityDCmotor_8ino.html#a6b2bd4ae2c057b356d5ba7ab23cb5a86">IN2</a>, LOW);</div>
+<div class="line"><span class="lineno">  153</span>  analogWrite(<a class="code hl_variable" href="humidityDCmotor_8ino.html#af13035dfeda2b2c70d012954b5729697">ENA</a>, <a class="code hl_variable" href="humidityDCmotor_8ino.html#a218b4f7c6cc2681a99c23a3b089d68b1">speed</a>);  <span class="comment">// sets speed received from control system</span></div>
+<div class="line"><span class="lineno">  154</span>}</div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_a0486a9bf56d6a6492727a781ab493a36"><div class="ttname"><a href="humidityDCmotor_8ino.html#a0486a9bf56d6a6492727a781ab493a36">IN1</a></div><div class="ttdeci">const int IN1</div><div class="ttdoc">Pin connected to Input1 of the motor driver for directional control.</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00033">humidityDCmotor.ino:33</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_a6b2bd4ae2c057b356d5ba7ab23cb5a86"><div class="ttname"><a href="humidityDCmotor_8ino.html#a6b2bd4ae2c057b356d5ba7ab23cb5a86">IN2</a></div><div class="ttdeci">const int IN2</div><div class="ttdoc">Pin connected to Input2 of the motor driver for directional control.</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00034">humidityDCmotor.ino:34</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_af13035dfeda2b2c70d012954b5729697"><div class="ttname"><a href="humidityDCmotor_8ino.html#af13035dfeda2b2c70d012954b5729697">ENA</a></div><div class="ttdeci">const int ENA</div><div class="ttdoc">Pin connected to Enable pin of the motor driver, controls speed.</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00032">humidityDCmotor.ino:32</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -293,10 +367,57 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00056">56</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>            {</div>
-<div class="line"><span class="lineno">   57</span>  <span class="comment">//...omitted for brevity...</span></div>
-<div class="line"><span class="lineno">   58</span>}</div>
+<p>The main function that is continuously looped after setup. </p>
+<p>This function runs the MQTT client, checks if it is connected and tries to reconnect if not. It also sets up and checks measurement intervals, reads the humidity and temperature, and publishes these values to the MQTT broker. An analogRead is performed to measure voltage from a sensor which is also published.</p>
+<dl class="section note"><dt>Note</dt><dd>If the DHT sensor fails to read, the function will return early. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00104">104</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>            {</div>
+<div class="line"><span class="lineno">  105</span>  delay(200);</div>
+<div class="line"><span class="lineno">  106</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="dht22_8ino.html#aee63e84c606cfaefce454689113c636c">client</a>.connected()) {</div>
+<div class="line"><span class="lineno">  107</span>    <a class="code hl_function" href="humidityDCmotor_8ino.html#a4bcd6ce7d04c38f8c4ff908d1fc50f86">reconnect</a>();</div>
+<div class="line"><span class="lineno">  108</span>  }</div>
+<div class="line"><span class="lineno">  109</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="dht22_8ino.html#aee63e84c606cfaefce454689113c636c">client</a>.loop())</div>
+<div class="line"><span class="lineno">  110</span>    <a class="code hl_function" href="dht22_8ino.html#aee63e84c606cfaefce454689113c636c">client</a>.connect(<span class="stringliteral">&quot;ESP8266ClientDCMotor&quot;</span>, <a class="code hl_variable" href="humidityDCmotor_8ino.html#a8e20c6ce55a404e1725f43210525b3bc">MQTT_username</a>, <a class="code hl_variable" href="humidityDCmotor_8ino.html#a561386b8c64656896f88a2e34c58dfe3">MQTT_password</a>);</div>
+<div class="line"><span class="lineno">  111</span>  <a class="code hl_variable" href="humidityDCmotor_8ino.html#ae6f84c5196bb115c5339065e03aa6651">now1</a> = millis();</div>
+<div class="line"><span class="lineno">  112</span>  <a class="code hl_variable" href="humidityDCmotor_8ino.html#af06539f0de1d30792a0e62f2142cba5f">now2</a> = millis();</div>
+<div class="line"><span class="lineno">  113</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="humidityDCmotor_8ino.html#ae6f84c5196bb115c5339065e03aa6651">now1</a> - <a class="code hl_variable" href="humidityDCmotor_8ino.html#a133e48c7775c8b7b3fb2e12278f6b4dd">lastMeasure1</a> &gt; 200) {  <span class="comment">// checks measurement interval</span></div>
+<div class="line"><span class="lineno">  114</span>    <a class="code hl_variable" href="humidityDCmotor_8ino.html#a133e48c7775c8b7b3fb2e12278f6b4dd">lastMeasure1</a> = <a class="code hl_variable" href="humidityDCmotor_8ino.html#ae6f84c5196bb115c5339065e03aa6651">now1</a>;</div>
+<div class="line"><span class="lineno">  115</span>    <a class="code hl_variable" href="humidityDCmotor_8ino.html#afdba3929cfab1b5aff2bde4688bd3ff2">digitalVoltage</a> = analogRead(<a class="code hl_variable" href="humidityDCmotor_8ino.html#a1dc085aeaaec657b48a2e349e1aa85be">analogPin</a>);                          <span class="comment">//sets up measurement interval</span></div>
+<div class="line"><span class="lineno">  116</span>    <a class="code hl_function" href="dht22_8ino.html#aee63e84c606cfaefce454689113c636c">client</a>.publish(<span class="stringliteral">&quot;dry/feedback&quot;</span>, String(<a class="code hl_variable" href="humidityDCmotor_8ino.html#afdba3929cfab1b5aff2bde4688bd3ff2">digitalVoltage</a>).c_str());  <span class="comment">// publishes humidity</span></div>
+<div class="line"><span class="lineno">  117</span>    Serial.print(<span class="stringliteral">&quot;Measured voltage: &quot;</span>);</div>
+<div class="line"><span class="lineno">  118</span>    Serial.println(<a class="code hl_variable" href="humidityDCmotor_8ino.html#afdba3929cfab1b5aff2bde4688bd3ff2">digitalVoltage</a>);</div>
+<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="humidityDCmotor_8ino.html#af06539f0de1d30792a0e62f2142cba5f">now2</a> - <a class="code hl_variable" href="humidityDCmotor_8ino.html#a93b16ea1a0cf6b2ce9cb005b0b2d7ade">lastMeasure2</a> &gt; 2000) {  <span class="comment">// checks measurement interval</span></div>
+<div class="line"><span class="lineno">  120</span>      <a class="code hl_variable" href="humidityDCmotor_8ino.html#a93b16ea1a0cf6b2ce9cb005b0b2d7ade">lastMeasure2</a> = <a class="code hl_variable" href="humidityDCmotor_8ino.html#af06539f0de1d30792a0e62f2142cba5f">now2</a>;</div>
+<div class="line"><span class="lineno">  121</span>      <span class="keywordtype">float</span> <a class="code hl_variable" href="humidityDCmotor_8ino.html#ac50fcb4128442a2ca0c5793a8f13ab2a">humidityPub</a> = <a class="code hl_function" href="humidityDCmotor_8ino.html#a954e8d8deb756924c12914cc3cffe82e">dht</a>.readHumidity();  <span class="comment">// reads humidity</span></div>
+<div class="line"><span class="lineno">  122</span>      <span class="keywordtype">float</span> <a class="code hl_variable" href="humidityDCmotor_8ino.html#a4719769774141db5a34f8cd737230e7a">tempPub</a> = <a class="code hl_function" href="humidityDCmotor_8ino.html#a954e8d8deb756924c12914cc3cffe82e">dht</a>.readTemperature();   <span class="comment">// reads temperature</span></div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>      <span class="keywordflow">if</span> (isnan(<a class="code hl_variable" href="humidityDCmotor_8ino.html#ac50fcb4128442a2ca0c5793a8f13ab2a">humidityPub</a>)) {  <span class="comment">// could add an or statement to check temperature as well</span></div>
+<div class="line"><span class="lineno">  125</span>        Serial.println(<span class="stringliteral">&quot;Failed to read from DHT sensor!&quot;</span>);</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  127</span>      }</div>
+<div class="line"><span class="lineno">  128</span>      <span class="comment">// client.publish(&quot;dry/humidity&quot;, String(humidityPub).c_str());  // publishes humidity</span></div>
+<div class="line"><span class="lineno">  129</span>      <a class="code hl_function" href="dht22_8ino.html#aee63e84c606cfaefce454689113c636c">client</a>.publish(<span class="stringliteral">&quot;dry/temperature&quot;</span>, String(<a class="code hl_variable" href="humidityDCmotor_8ino.html#a4719769774141db5a34f8cd737230e7a">tempPub</a>).c_str());   <span class="comment">// publishes temperature</span></div>
+<div class="line"><span class="lineno">  130</span>      Serial.print(<span class="stringliteral">&quot;Measured humidity: &quot;</span>);</div>
+<div class="line"><span class="lineno">  131</span>      Serial.println(<a class="code hl_variable" href="humidityDCmotor_8ino.html#ac50fcb4128442a2ca0c5793a8f13ab2a">humidityPub</a>);</div>
+<div class="line"><span class="lineno">  132</span>      Serial.print(<span class="stringliteral">&quot;Measured temp: &quot;</span>);</div>
+<div class="line"><span class="lineno">  133</span>      Serial.println(<a class="code hl_variable" href="humidityDCmotor_8ino.html#a4719769774141db5a34f8cd737230e7a">tempPub</a>);</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
+<div class="line"><span class="lineno">  135</span>  }</div>
+<div class="line"><span class="lineno">  136</span>}</div>
+<div class="ttc" id="adht22_8ino_html_aee63e84c606cfaefce454689113c636c"><div class="ttname"><a href="dht22_8ino.html#aee63e84c606cfaefce454689113c636c">client</a></div><div class="ttdeci">PubSubClient client(espClient)</div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_a133e48c7775c8b7b3fb2e12278f6b4dd"><div class="ttname"><a href="humidityDCmotor_8ino.html#a133e48c7775c8b7b3fb2e12278f6b4dd">lastMeasure1</a></div><div class="ttdeci">long lastMeasure1</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00049">humidityDCmotor.ino:49</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_a1dc085aeaaec657b48a2e349e1aa85be"><div class="ttname"><a href="humidityDCmotor_8ino.html#a1dc085aeaaec657b48a2e349e1aa85be">analogPin</a></div><div class="ttdeci">const int analogPin</div><div class="ttdoc">Analog input pin for optional sensor.</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00036">humidityDCmotor.ino:36</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_a4719769774141db5a34f8cd737230e7a"><div class="ttname"><a href="humidityDCmotor_8ino.html#a4719769774141db5a34f8cd737230e7a">tempPub</a></div><div class="ttdeci">float tempPub</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00043">humidityDCmotor.ino:43</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_a4bcd6ce7d04c38f8c4ff908d1fc50f86"><div class="ttname"><a href="humidityDCmotor_8ino.html#a4bcd6ce7d04c38f8c4ff908d1fc50f86">reconnect</a></div><div class="ttdeci">void reconnect()</div><div class="ttdoc">Reconnects to the MQTT broker if the client is not currently connected.</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00221">humidityDCmotor.ino:221</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_a561386b8c64656896f88a2e34c58dfe3"><div class="ttname"><a href="humidityDCmotor_8ino.html#a561386b8c64656896f88a2e34c58dfe3">MQTT_password</a></div><div class="ttdeci">const char * MQTT_password</div><div class="ttdoc">MQTT password.</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00025">humidityDCmotor.ino:25</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_a8e20c6ce55a404e1725f43210525b3bc"><div class="ttname"><a href="humidityDCmotor_8ino.html#a8e20c6ce55a404e1725f43210525b3bc">MQTT_username</a></div><div class="ttdeci">const char * MQTT_username</div><div class="ttdoc">MQTT username.</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00024">humidityDCmotor.ino:24</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_a93b16ea1a0cf6b2ce9cb005b0b2d7ade"><div class="ttname"><a href="humidityDCmotor_8ino.html#a93b16ea1a0cf6b2ce9cb005b0b2d7ade">lastMeasure2</a></div><div class="ttdeci">long lastMeasure2</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00050">humidityDCmotor.ino:50</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_a954e8d8deb756924c12914cc3cffe82e"><div class="ttname"><a href="humidityDCmotor_8ino.html#a954e8d8deb756924c12914cc3cffe82e">dht</a></div><div class="ttdeci">DHT dht(DHTPin, DHTTYPE)</div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_ac50fcb4128442a2ca0c5793a8f13ab2a"><div class="ttname"><a href="humidityDCmotor_8ino.html#ac50fcb4128442a2ca0c5793a8f13ab2a">humidityPub</a></div><div class="ttdeci">float humidityPub</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00042">humidityDCmotor.ino:42</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_ae6f84c5196bb115c5339065e03aa6651"><div class="ttname"><a href="humidityDCmotor_8ino.html#ae6f84c5196bb115c5339065e03aa6651">now1</a></div><div class="ttdeci">long now1</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00047">humidityDCmotor.ino:47</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_af06539f0de1d30792a0e62f2142cba5f"><div class="ttname"><a href="humidityDCmotor_8ino.html#af06539f0de1d30792a0e62f2142cba5f">now2</a></div><div class="ttdeci">long now2</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00048">humidityDCmotor.ino:48</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_afdba3929cfab1b5aff2bde4688bd3ff2"><div class="ttname"><a href="humidityDCmotor_8ino.html#afdba3929cfab1b5aff2bde4688bd3ff2">digitalVoltage</a></div><div class="ttdeci">int digitalVoltage</div><div class="ttdoc">Variable to hold the voltage read from the digital pin.</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00052">humidityDCmotor.ino:52</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -315,10 +436,24 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00092">92</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>                 {</div>
-<div class="line"><span class="lineno">   93</span>  <span class="comment">//...omitted for brevity...</span></div>
-<div class="line"><span class="lineno">   94</span>}</div>
+<p>Reconnects to the MQTT broker if the client is not currently connected. </p>
+<p>This function attempts to reconnect to the MQTT broker using the global constants <code>MQTT_username</code> and <code>MQTT_password</code> as credentials. The function blocks execution and tries to reconnect every 5 seconds until a successful connection is established. Once connected, it subscribes to the topic "dry/speed". </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00221">221</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  221</span>                 {</div>
+<div class="line"><span class="lineno">  222</span>  <span class="keywordflow">while</span> (!<a class="code hl_function" href="dht22_8ino.html#aee63e84c606cfaefce454689113c636c">client</a>.connected()) {  <span class="comment">// Loops until connected</span></div>
+<div class="line"><span class="lineno">  223</span>    Serial.print(<span class="stringliteral">&quot;Attempting MQTT connection...&quot;</span>);</div>
+<div class="line"><span class="lineno">  224</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="dht22_8ino.html#aee63e84c606cfaefce454689113c636c">client</a>.connect(<span class="stringliteral">&quot;ESP8266ClientDC&quot;</span>, <a class="code hl_variable" href="humidityDCmotor_8ino.html#a8e20c6ce55a404e1725f43210525b3bc">MQTT_username</a>, <a class="code hl_variable" href="humidityDCmotor_8ino.html#a561386b8c64656896f88a2e34c58dfe3">MQTT_password</a>)) {</div>
+<div class="line"><span class="lineno">  225</span>      Serial.println(<span class="stringliteral">&quot;connected&quot;</span>);</div>
+<div class="line"><span class="lineno">  226</span>      <a class="code hl_function" href="dht22_8ino.html#aee63e84c606cfaefce454689113c636c">client</a>.subscribe(<span class="stringliteral">&quot;dry/speed&quot;</span>);  <span class="comment">// subscribe to relevant topic</span></div>
+<div class="line"><span class="lineno">  227</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  228</span>      Serial.print(<span class="stringliteral">&quot;failed, rc=&quot;</span>);</div>
+<div class="line"><span class="lineno">  229</span>      Serial.print(<a class="code hl_function" href="dht22_8ino.html#aee63e84c606cfaefce454689113c636c">client</a>.state());</div>
+<div class="line"><span class="lineno">  230</span>      Serial.println(<span class="stringliteral">&quot; try again in 5 seconds&quot;</span>);</div>
+<div class="line"><span class="lineno">  231</span>      delay(5000);</div>
+<div class="line"><span class="lineno">  232</span>    }</div>
+<div class="line"><span class="lineno">  233</span>  }</div>
+<div class="line"><span class="lineno">  234</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -337,10 +472,37 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00048">48</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>             {</div>
-<div class="line"><span class="lineno">   49</span>  <span class="comment">//...omitted for brevity...</span></div>
-<div class="line"><span class="lineno">   50</span>}</div>
+<p>Arduino's setup function, executed once at the start of the program. </p>
+<p>This function initializes the DC motor pins, DHT sensor, WiFi connection, and MQTT client. The motor's direction is set, and the MQTT callback function is defined.</p>
+<p>Initialize system at startup.</p>
+<p>This function is called once when the Arduino starts up. It configures the necessary GPIO pins for the motor and initializes the DHT22 sensor, the serial port for debugging, and the MQTT client for communication. </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00070">70</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>             {</div>
+<div class="line"><span class="lineno">   71</span>  Serial.begin(115200);  <span class="comment">// Start the serial communication with the baud rate of 115200</span></div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>  pinMode(<a class="code hl_variable" href="humidityDCmotor_8ino.html#af13035dfeda2b2c70d012954b5729697">ENA</a>, OUTPUT);  <span class="comment">// Set the ENA pin as output (Motor speed control)</span></div>
+<div class="line"><span class="lineno">   74</span>  pinMode(<a class="code hl_variable" href="humidityDCmotor_8ino.html#a0486a9bf56d6a6492727a781ab493a36">IN1</a>, OUTPUT);  <span class="comment">// Set the IN1 pin as output (Motor direction control)</span></div>
+<div class="line"><span class="lineno">   75</span>  pinMode(<a class="code hl_variable" href="humidityDCmotor_8ino.html#a6b2bd4ae2c057b356d5ba7ab23cb5a86">IN2</a>, OUTPUT);  <span class="comment">// Set the IN2 pin as output (Motor direction control)</span></div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>  digitalWrite(<a class="code hl_variable" href="humidityDCmotor_8ino.html#a0486a9bf56d6a6492727a781ab493a36">IN1</a>, LOW);  <span class="comment">// Set IN1 to low to prevent the motor from starting immediately at power-on</span></div>
+<div class="line"><span class="lineno">   78</span>  digitalWrite(<a class="code hl_variable" href="humidityDCmotor_8ino.html#a6b2bd4ae2c057b356d5ba7ab23cb5a86">IN2</a>, LOW);  <span class="comment">// Set IN2 to low to prevent the motor from starting immediately at power-on</span></div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>  delay(500);  <span class="comment">// Delay to allow the motor to respond</span></div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>  digitalWrite(<a class="code hl_variable" href="humidityDCmotor_8ino.html#a0486a9bf56d6a6492727a781ab493a36">IN1</a>, HIGH);  <span class="comment">// Set direction of motor</span></div>
+<div class="line"><span class="lineno">   83</span>  digitalWrite(<a class="code hl_variable" href="humidityDCmotor_8ino.html#a6b2bd4ae2c057b356d5ba7ab23cb5a86">IN2</a>, LOW);  <span class="comment">// Ensure motor moves in the direction set by IN1</span></div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>  <a class="code hl_function" href="humidityDCmotor_8ino.html#a954e8d8deb756924c12914cc3cffe82e">dht</a>.begin();  <span class="comment">// Start the DHT sensor</span></div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>  <a class="code hl_function" href="humidityDCmotor_8ino.html#ae5b88d967e3185d98053cf055c8b4f1f">setup_wifi</a>();  <span class="comment">// Call function to set up wifi</span></div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>  <a class="code hl_function" href="dht22_8ino.html#aee63e84c606cfaefce454689113c636c">client</a>.setServer(<a class="code hl_variable" href="humidityDCmotor_8ino.html#ae62fa8557ef4586408dcbe2f1a09e839">mqtt_server</a>, 1883);  <span class="comment">// Set the MQTT server to the given IP address and port</span></div>
+<div class="line"><span class="lineno">   90</span>  <a class="code hl_function" href="dht22_8ino.html#aee63e84c606cfaefce454689113c636c">client</a>.setCallback(<a class="code hl_function" href="humidityDCmotor_8ino.html#aeab2f678ad886fb7a6c48a77ce97d410">callback</a>);  <span class="comment">// Set the function to be called when a message arrives at the client</span></div>
+<div class="line"><span class="lineno">   91</span>}</div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_ae5b88d967e3185d98053cf055c8b4f1f"><div class="ttname"><a href="humidityDCmotor_8ino.html#ae5b88d967e3185d98053cf055c8b4f1f">setup_wifi</a></div><div class="ttdeci">void setup_wifi()</div><div class="ttdoc">Connects the ESP8266 to the specified WiFi network.</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00198">humidityDCmotor.ino:198</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_ae62fa8557ef4586408dcbe2f1a09e839"><div class="ttname"><a href="humidityDCmotor_8ino.html#ae62fa8557ef4586408dcbe2f1a09e839">mqtt_server</a></div><div class="ttdeci">const char * mqtt_server</div><div class="ttdoc">MQTT server IP address.</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00026">humidityDCmotor.ino:26</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_aeab2f678ad886fb7a6c48a77ce97d410"><div class="ttname"><a href="humidityDCmotor_8ino.html#aeab2f678ad886fb7a6c48a77ce97d410">callback</a></div><div class="ttdeci">void callback(char *topic, byte *message, unsigned int length)</div><div class="ttdoc">Handles the incoming messages on the subscribed MQTT topics.</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00170">humidityDCmotor.ino:170</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -359,14 +521,47 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00084">84</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>                  {</div>
-<div class="line"><span class="lineno">   85</span>  <span class="comment">//...omitted for brevity...</span></div>
-<div class="line"><span class="lineno">   86</span>}</div>
+<p>Connects the ESP8266 to the specified WiFi network. </p>
+<p>This function attempts to connect the ESP8266 to the WiFi network defined by the global constants <code>ssid</code> and <code>password</code>. It blocks execution until a successful connection is established, printing dots every 500 milliseconds to indicate progress. Once connected, it prints the local IP address assigned to the ESP8266 by the WiFi router. </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00198">198</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  198</span>                  {  <span class="comment">// Connects to the network</span></div>
+<div class="line"><span class="lineno">  199</span>  delay(10);</div>
+<div class="line"><span class="lineno">  200</span>  Serial.print(<span class="stringliteral">&quot;Connecting to &quot;</span>);</div>
+<div class="line"><span class="lineno">  201</span>  Serial.println(<a class="code hl_variable" href="humidityDCmotor_8ino.html#a587ba0cb07f02913598610049a3bbb79">ssid</a>);</div>
+<div class="line"><span class="lineno">  202</span>  WiFi.begin(<a class="code hl_variable" href="humidityDCmotor_8ino.html#a587ba0cb07f02913598610049a3bbb79">ssid</a>, <a class="code hl_variable" href="humidityDCmotor_8ino.html#aa4a2ebcb494493f648ae1e6975672575">password</a>);</div>
+<div class="line"><span class="lineno">  203</span>  <span class="keywordflow">while</span> (WiFi.status() != WL_CONNECTED) {  <span class="comment">// prints . for every 500ms of connection to create feeling progress</span></div>
+<div class="line"><span class="lineno">  204</span>    delay(500);</div>
+<div class="line"><span class="lineno">  205</span>    Serial.print(<span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><span class="lineno">  206</span>  }</div>
+<div class="line"><span class="lineno">  207</span>  Serial.println(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  208</span>  Serial.print(<span class="stringliteral">&quot;WiFi connected - ESP IP address: &quot;</span>);</div>
+<div class="line"><span class="lineno">  209</span>  Serial.println(WiFi.localIP());  <span class="comment">// Prints IP</span></div>
+<div class="line"><span class="lineno">  210</span>}</div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_a587ba0cb07f02913598610049a3bbb79"><div class="ttname"><a href="humidityDCmotor_8ino.html#a587ba0cb07f02913598610049a3bbb79">ssid</a></div><div class="ttdeci">const char * ssid</div><div class="ttdoc">SSID of your WiFi network.</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00020">humidityDCmotor.ino:20</a></div></div>
+<div class="ttc" id="ahumidityDCmotor_8ino_html_aa4a2ebcb494493f648ae1e6975672575"><div class="ttname"><a href="humidityDCmotor_8ino.html#aa4a2ebcb494493f648ae1e6975672575">password</a></div><div class="ttdeci">const char * password</div><div class="ttdoc">Password of your WiFi network.</div><div class="ttdef"><b>Definition:</b> <a href="humidityDCmotor_8ino.html#l00021">humidityDCmotor.ino:21</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a1dc085aeaaec657b48a2e349e1aa85be" name="a1dc085aeaaec657b48a2e349e1aa85be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc085aeaaec657b48a2e349e1aa85be">&#9670;&#160;</a></span>analogPin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int analogPin = A0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Analog input pin for optional sensor. </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00036">36</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+
+</div>
+</div>
 <a id="a36c07f4bebe4701d1682b3691a72307b" name="a36c07f4bebe4701d1682b3691a72307b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a36c07f4bebe4701d1682b3691a72307b">&#9670;&#160;</a></span>DHTPin</h2>
 
@@ -379,7 +574,27 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00030">30</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p>Digital pin connected to DHT sensor's data pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00038">38</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+
+</div>
+</div>
+<a id="afdba3929cfab1b5aff2bde4688bd3ff2" name="afdba3929cfab1b5aff2bde4688bd3ff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdba3929cfab1b5aff2bde4688bd3ff2">&#9670;&#160;</a></span>digitalVoltage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int digitalVoltage = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable to hold the voltage read from the digital pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00052">52</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
@@ -395,7 +610,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00027">27</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p>Pin connected to Enable pin of the motor driver, controls speed. </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00032">32</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
@@ -411,7 +628,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00023">23</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00028">28</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
@@ -427,7 +644,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00036">36</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00042">42</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
@@ -443,7 +660,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00028">28</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p>Pin connected to Input1 of the motor driver for directional control. </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00033">33</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
@@ -459,23 +678,41 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00029">29</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p>Pin connected to Input2 of the motor driver for directional control. </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00034">34</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
-<a id="a7a70c9a32012cf238eaf48a9e52613e5" name="a7a70c9a32012cf238eaf48a9e52613e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a70c9a32012cf238eaf48a9e52613e5">&#9670;&#160;</a></span>lastMeasure</h2>
+<a id="a133e48c7775c8b7b3fb2e12278f6b4dd" name="a133e48c7775c8b7b3fb2e12278f6b4dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a133e48c7775c8b7b3fb2e12278f6b4dd">&#9670;&#160;</a></span>lastMeasure1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">long lastMeasure = 0</td>
+          <td class="memname">long lastMeasure1 = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00042">42</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00049">49</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+
+</div>
+</div>
+<a id="a93b16ea1a0cf6b2ce9cb005b0b2d7ade" name="a93b16ea1a0cf6b2ce9cb005b0b2d7ade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93b16ea1a0cf6b2ce9cb005b0b2d7ade">&#9670;&#160;</a></span>lastMeasure2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long lastMeasure2 = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00050">50</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
@@ -491,7 +728,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00019">19</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p>MQTT password. </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00025">25</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
@@ -507,7 +746,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00020">20</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p>MQTT server IP address. </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00026">26</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
@@ -523,23 +764,41 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00018">18</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p>MQTT username. </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00024">24</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
-<a id="a0ef90926c9a05dcb1b2fac4a9655e546" name="a0ef90926c9a05dcb1b2fac4a9655e546"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ef90926c9a05dcb1b2fac4a9655e546">&#9670;&#160;</a></span>now</h2>
+<a id="ae6f84c5196bb115c5339065e03aa6651" name="ae6f84c5196bb115c5339065e03aa6651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6f84c5196bb115c5339065e03aa6651">&#9670;&#160;</a></span>now1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">long now = millis()</td>
+          <td class="memname">long now1 = millis()</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00041">41</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00047">47</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+
+</div>
+</div>
+<a id="af06539f0de1d30792a0e62f2142cba5f" name="af06539f0de1d30792a0e62f2142cba5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af06539f0de1d30792a0e62f2142cba5f">&#9670;&#160;</a></span>now2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long now2 = millis()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00048">48</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
@@ -555,7 +814,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00017">17</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p>Password of your WiFi network. </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00021">21</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
@@ -571,7 +832,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00038">38</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00044">44</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
@@ -587,7 +848,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00016">16</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p>SSID of your WiFi network. </p>
+
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00020">20</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>
@@ -603,7 +866,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00037">37</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
+<p class="definition">Definition at line <a class="el" href="humidityDCmotor_8ino_source.html#l00043">43</a> of file <a class="el" href="humidityDCmotor_8ino_source.html">humidityDCmotor.ino</a>.</p>
 
 </div>
 </div>

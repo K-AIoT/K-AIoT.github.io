@@ -80,25 +80,25 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>This class acts as a bridge for an OPC UA and MQTT client pair.  
+<p>This class acts as a bridge between an OPC UA and MQTT client pair.  
  <a href="classbridge_1_1MqttOpcuaBridge.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afba2d07a871b255b806b7c83633c1cae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridge_1_1MqttOpcuaBridge.html#afba2d07a871b255b806b7c83633c1cae">__init__</a> (self, Optional[Client] opcuaClient=None, Optional[mqtt.Client] mqttClient=None)</td></tr>
-<tr class="memdesc:afba2d07a871b255b806b7c83633c1cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for MqttOpcuaBridge class.  <br /></td></tr>
+<tr class="memdesc:afba2d07a871b255b806b7c83633c1cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor for the MqttOpcuaBridge class.  <br /></td></tr>
 <tr class="separator:afba2d07a871b255b806b7c83633c1cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7619085384b24e34aa47e33c4d7893d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridge_1_1MqttOpcuaBridge.html#ab7619085384b24e34aa47e33c4d7893d">getOpcuaClient</a> (self)</td></tr>
-<tr class="memdesc:ab7619085384b24e34aa47e33c4d7893d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter function for OPC UA client.  <br /></td></tr>
+<tr class="memdesc:ab7619085384b24e34aa47e33c4d7893d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter method for the OPC UA client.  <br /></td></tr>
 <tr class="separator:ab7619085384b24e34aa47e33c4d7893d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af091502af0c8e2d0ba0a970b04c79c36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridge_1_1MqttOpcuaBridge.html#af091502af0c8e2d0ba0a970b04c79c36">getMqttClient</a> (self)</td></tr>
-<tr class="memdesc:af091502af0c8e2d0ba0a970b04c79c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter function for MQTT client.  <br /></td></tr>
+<tr class="memdesc:af091502af0c8e2d0ba0a970b04c79c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter method for the MQTT client.  <br /></td></tr>
 <tr class="separator:af091502af0c8e2d0ba0a970b04c79c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ab1bf7ddf1bcc304c8bd1c9e87b1c6c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridge_1_1MqttOpcuaBridge.html#a6ab1bf7ddf1bcc304c8bd1c9e87b1c6c">setOpcuaClient</a> (self, newClient)</td></tr>
-<tr class="memdesc:a6ab1bf7ddf1bcc304c8bd1c9e87b1c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter function for OPC UA client.  <br /></td></tr>
+<tr class="memdesc:a6ab1bf7ddf1bcc304c8bd1c9e87b1c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter method for the OPC UA client.  <br /></td></tr>
 <tr class="separator:a6ab1bf7ddf1bcc304c8bd1c9e87b1c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89da28b867b6a807f958738a2856d42a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridge_1_1MqttOpcuaBridge.html#a89da28b867b6a807f958738a2856d42a">setMqttClient</a> (self, newClient)</td></tr>
-<tr class="memdesc:a89da28b867b6a807f958738a2856d42a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter function for MQTT client.  <br /></td></tr>
+<tr class="memdesc:a89da28b867b6a807f958738a2856d42a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter method for the MQTT client.  <br /></td></tr>
 <tr class="separator:a89da28b867b6a807f958738a2856d42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -109,9 +109,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a9a099cdca6e4fee2866de9f288bcbb20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class acts as a bridge for an OPC UA and MQTT client pair. </p>
+<div class="textblock"><p>This class acts as a bridge between an OPC UA and MQTT client pair. </p>
+<p>It provides methods to get and set both OPC UA and MQTT clients, enabling them to communicate between themselves. </p>
 
-<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00009">9</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00003">3</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afba2d07a871b255b806b7c83633c1cae" name="afba2d07a871b255b806b7c83633c1cae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afba2d07a871b255b806b7c83633c1cae">&#9670;&#160;</a></span>__init__()</h2>
@@ -145,20 +146,20 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor for MqttOpcuaBridge class. </p>
+<p>The constructor for the MqttOpcuaBridge class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">opcuaClient</td><td>The Client object for OPC UA client </td></tr>
-    <tr><td class="paramname">mqttClient</td><td>The Client object for MQTT client </td></tr>
+    <tr><td class="paramname">opcuaClient</td><td>An instance of the OPC UA client class (optional). </td></tr>
+    <tr><td class="paramname">mqttClient</td><td>An instance of the MQTT client class (optional). </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00014">14</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>    <span class="keyword">def </span>__init__(self, opcuaClient: Optional[Client] = <span class="keywordtype">None</span>, mqttClient: Optional[mqtt.Client] = <span class="keywordtype">None</span>):</div>
-<div class="line"><span class="lineno">   15</span>        self._mqttClient = mqttClient</div>
-<div class="line"><span class="lineno">   16</span>        self._opcuaClient = opcuaClient</div>
-<div class="line"><span class="lineno">   17</span> </div>
+<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00008">8</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>    <span class="keyword">def </span>__init__(self, opcuaClient: Optional[Client] = <span class="keywordtype">None</span>, mqttClient: Optional[mqtt.Client] = <span class="keywordtype">None</span>):</div>
+<div class="line"><span class="lineno">    9</span>        self._mqttClient = mqttClient</div>
+<div class="line"><span class="lineno">   10</span>        self._opcuaClient = opcuaClient</div>
+<div class="line"><span class="lineno">   11</span> </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -179,13 +180,13 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Getter function for MQTT client. </p>
-<dl class="section return"><dt>Returns</dt><dd>The MQTT client </dd></dl>
+<p>Getter method for the MQTT client. </p>
+<dl class="section return"><dt>Returns</dt><dd>mqtt.Client object The current MQTT client instance. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00025">25</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>    <span class="keyword">def </span>getMqttClient(self):</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> self._mqttClient</div>
-<div class="line"><span class="lineno">   27</span>    </div>
+<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00019">19</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    <span class="keyword">def </span>getMqttClient(self):</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">return</span> self._mqttClient</div>
+<div class="line"><span class="lineno">   21</span>    </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -205,13 +206,13 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Getter function for OPC UA client. </p>
-<dl class="section return"><dt>Returns</dt><dd>The OPC UA client </dd></dl>
+<p>Getter method for the OPC UA client. </p>
+<dl class="section return"><dt>Returns</dt><dd>Client object The current OPC UA client instance. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00020">20</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>    <span class="keyword">def </span>getOpcuaClient(self):</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">return</span> self._opcuaClient</div>
-<div class="line"><span class="lineno">   22</span> </div>
+<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00014">14</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    <span class="keyword">def </span>getOpcuaClient(self):</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">return</span> self._opcuaClient</div>
+<div class="line"><span class="lineno">   16</span> </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -241,18 +242,18 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Setter function for MQTT client. </p>
+<p>Setter method for the MQTT client. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">newClient</td><td>The new Client object for MQTT client </td></tr>
+    <tr><td class="paramname">newClient</td><td>An instance of the mqtt.Client class to replace the current MQTT client. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00035">35</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>    <span class="keyword">def </span>setMqttClient(self, newClient):</div>
-<div class="line"><span class="lineno">   36</span>        self._mqttClient = newClient</div>
-<div class="line"><span class="lineno">   37</span> </div>
+<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00029">29</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    <span class="keyword">def </span>setMqttClient(self, newClient):</div>
+<div class="line"><span class="lineno">   30</span>        self._mqttClient = newClient</div>
+<div class="line"><span class="lineno">   31</span> </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -282,18 +283,18 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Setter function for OPC UA client. </p>
+<p>Setter method for the OPC UA client. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">newClient</td><td>The new Client object for OPC UA client </td></tr>
+    <tr><td class="paramname">newClient</td><td>An instance of the Client class to replace the current OPC UA client. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00030">30</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>    <span class="keyword">def </span>setOpcuaClient(self, newClient):</div>
-<div class="line"><span class="lineno">   31</span>        self._opcuaClient = newClient</div>
-<div class="line"><span class="lineno">   32</span> </div>
+<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00024">24</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    <span class="keyword">def </span>setOpcuaClient(self, newClient):</div>
+<div class="line"><span class="lineno">   25</span>        self._opcuaClient = newClient</div>
+<div class="line"><span class="lineno">   26</span> </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -318,7 +319,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00015">15</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00009">9</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
 
 </div>
 </div>
@@ -342,7 +343,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00016">16</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bridge_8py_source.html#l00010">10</a> of file <a class="el" href="bridge_8py_source.html">bridge.py</a>.</p>
 
 </div>
 </div>

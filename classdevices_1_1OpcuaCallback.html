@@ -80,7 +80,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Class that acts as an OPC UA callback handler, managing any OPC UA events and data changes.  
+<p>This class acts as an OPC UA callback handler.  
  <a href="classdevices_1_1OpcuaCallback.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for devices.OpcuaCallback:</div>
@@ -88,36 +88,35 @@ Inheritance diagram for devices.OpcuaCallback:</div>
  <div class="center">
   <img src="classdevices_1_1OpcuaCallback.png" usemap="#devices.OpcuaCallback_map" alt=""/>
   <map id="devices.OpcuaCallback_map" name="devices.OpcuaCallback_map">
-<area href="classdevices_1_1RosOpcuaCallback.html" title="Child class of OpcuaCallback class, specifically for handling callbacks related to ROS messages." alt="devices.RosOpcuaCallback" shape="rect" coords="0,56,168,80"/>
+<area href="classdevices_1_1RosOpcuaCallback.html" alt="devices.RosOpcuaCallback" shape="rect" coords="0,56,168,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae268ba9fa95d6d77c2adf50613ab9cf1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1OpcuaCallback.html#ae268ba9fa95d6d77c2adf50613ab9cf1">__init__</a> (self, ForwardRef('<a class="el" href="classdevices_1_1Device.html">Device</a>') device)</td></tr>
-<tr class="memdesc:ae268ba9fa95d6d77c2adf50613ab9cf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpcuaCallback constructor.  <br /></td></tr>
+<tr class="memdesc:ae268ba9fa95d6d77c2adf50613ab9cf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor for the OpcuaCallback class.  <br /></td></tr>
 <tr class="separator:ae268ba9fa95d6d77c2adf50613ab9cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a020a568d5659c01fa24db0c6f214dbcd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1OpcuaCallback.html#a020a568d5659c01fa24db0c6f214dbcd">getDevice</a> (self)</td></tr>
-<tr class="memdesc:a020a568d5659c01fa24db0c6f214dbcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the device associated with this OPC UA callback handler.  <br /></td></tr>
-<tr class="separator:a020a568d5659c01fa24db0c6f214dbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fa84fab32e50dc0693270b2c69ddf60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1OpcuaCallback.html#a7fa84fab32e50dc0693270b2c69ddf60">datachange_notification</a> (self, Node node, val, ua.DataChangeNotification data)</td></tr>
-<tr class="memdesc:a7fa84fab32e50dc0693270b2c69ddf60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles data change notifications from the OPC UA server.  <br /></td></tr>
-<tr class="separator:a7fa84fab32e50dc0693270b2c69ddf60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1215f020b9e014b138dfd7fe90396ea3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1OpcuaCallback.html#a1215f020b9e014b138dfd7fe90396ea3">event_notification</a> (self, ua.EventNotificationList event)</td></tr>
-<tr class="memdesc:a1215f020b9e014b138dfd7fe90396ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles event notifications from the OPC UA server.  <br /></td></tr>
-<tr class="separator:a1215f020b9e014b138dfd7fe90396ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab07cfd433d73d09411c8a8e0dc5bba7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1OpcuaCallback.html#ab07cfd433d73d09411c8a8e0dc5bba7a">getDevice</a> (self)</td></tr>
+<tr class="memdesc:ab07cfd433d73d09411c8a8e0dc5bba7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter method for the Device object associated with this callback.  <br /></td></tr>
+<tr class="separator:ab07cfd433d73d09411c8a8e0dc5bba7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67d13cb916d588cc394bd4ba3a564545"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1OpcuaCallback.html#a67d13cb916d588cc394bd4ba3a564545">datachange_notification</a> (self, Node node, val, ua.DataChangeNotification data)</td></tr>
+<tr class="memdesc:a67d13cb916d588cc394bd4ba3a564545"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous callback for data change events in the OPC UA server.  <br /></td></tr>
+<tr class="separator:a67d13cb916d588cc394bd4ba3a564545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0854dc26ebd8b4c4fa03985ffa5d5f13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1OpcuaCallback.html#a0854dc26ebd8b4c4fa03985ffa5d5f13">event_notification</a> (self, ua.EventNotificationList event)</td></tr>
+<tr class="memdesc:a0854dc26ebd8b4c4fa03985ffa5d5f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous callback for event notifications in the OPC UA server.  <br /></td></tr>
+<tr class="separator:a0854dc26ebd8b4c4fa03985ffa5d5f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:afc54559cc9a756823483af0ca472c359"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdevices_1_1OpcuaCallback.html#afc54559cc9a756823483af0ca472c359">_device</a></td></tr>
-<tr class="memdesc:afc54559cc9a756823483af0ca472c359"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reference to the device associated with this OPC UA callback handler.  <br /></td></tr>
 <tr class="separator:afc54559cc9a756823483af0ca472c359"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class that acts as an OPC UA callback handler, managing any OPC UA events and data changes. </p>
-<p>This class holds a reference to the device it is associated with and handles data changes and events coming from the OPC UA server. When a data change happens, it publishes the new value to all MQTT topics associated with the OPC UA node in the device. </p>
+<div class="textblock"><p>This class acts as an OPC UA callback handler. </p>
+<p>It manages any OPC UA events and data changes and updates the MQTT topics associated with the respective OPC UA nodes. </p>
 
-<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00013">13</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00003">3</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae268ba9fa95d6d77c2adf50613ab9cf1" name="ae268ba9fa95d6d77c2adf50613ab9cf1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae268ba9fa95d6d77c2adf50613ab9cf1">&#9670;&#160;</a></span>__init__()</h2>
@@ -145,27 +144,26 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>OpcuaCallback constructor. </p>
+<p>The constructor for the OpcuaCallback class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">device</td><td>The associated device of type Device </td></tr>
+    <tr><td class="paramname">device</td><td>A Device object, from which this callback gets MQTT topics and the MQTT-Opcua bridge. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classdevices_1_1RosOpcuaCallback.html#a085c60f7bcda10db7c1344f50e461ef5">devices.RosOpcuaCallback</a>.</p>
+<p>Reimplemented in <a class="el" href="classdevices_1_1RosOpcuaCallback.html#a8c5bc288785825b05047e3454231c2ec">devices.RosOpcuaCallback</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00017">17</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>    <span class="keyword">def </span>__init__(self, device : ForwardRef(<span class="stringliteral">&#39;Device&#39;</span>)):</div>
-<div class="line"><span class="lineno">   18</span>        </div>
-<div class="line"><span class="lineno">   20</span>        self._device = device </div>
-<div class="line"><span class="lineno">   21</span> </div>
+<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00007">7</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    <span class="keyword">def </span>__init__(self, device : ForwardRef(<span class="stringliteral">&#39;Device&#39;</span>)):</div>
+<div class="line"><span class="lineno">    8</span>        self._device = device <span class="comment"># Keeps reference to its associated Device.</span></div>
+<div class="line"><span class="lineno">    9</span> </div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7fa84fab32e50dc0693270b2c69ddf60" name="a7fa84fab32e50dc0693270b2c69ddf60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fa84fab32e50dc0693270b2c69ddf60">&#9670;&#160;</a></span>datachange_notification()</h2>
+<a id="a67d13cb916d588cc394bd4ba3a564545" name="a67d13cb916d588cc394bd4ba3a564545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67d13cb916d588cc394bd4ba3a564545">&#9670;&#160;</a></span>datachange_notification()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,31 +200,30 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Handles data change notifications from the OPC UA server. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Asynchronous callback for data change events in the OPC UA server. </p>
+<p>This method is called when a value change is detected in any OPC UA node. It then publishes the new value to each MQTT topic associated with the OPC UA node. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">node</td><td>The OPC UA node where the data change happened </td></tr>
-    <tr><td class="paramname">val</td><td>The new value of the node </td></tr>
-    <tr><td class="paramname">data</td><td>The data change notification </td></tr>
+    <tr><td class="paramname">node</td><td>An instance of the Node class from the asyncua module, which represents the OPC UA node that has a new value. </td></tr>
+    <tr><td class="paramname">val</td><td>The new value in the OPC UA node. </td></tr>
+    <tr><td class="paramname">data</td><td>An instance of the DataChangeNotification class from the asyncua module. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classdevices_1_1RosOpcuaCallback.html#af975b1306bdc6601b6fe55812dac6c38">devices.RosOpcuaCallback</a>.</p>
+<p>Reimplemented in <a class="el" href="classdevices_1_1RosOpcuaCallback.html#ae42272d2bc4dad5b84a228d898875980">devices.RosOpcuaCallback</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00034">34</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>    <span class="keyword">async def </span>datachange_notification(self, node: Node, val, data: ua.DataChangeNotification):</div>
-<div class="line"><span class="lineno">   35</span>        nodeName = await node.read_browse_name() </div>
-<div class="line"><span class="lineno">   36</span>        print(f<span class="stringliteral">&quot;OPC UA CHANGE ON NODE: {nodeName.Name}: {val}&quot;</span>)</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">for</span> mqttTopic <span class="keywordflow">in</span> self._device.getPubSubPairs()[node]: <span class="comment"># Iterates through the MQTT topics stored in the device&#39;s set of publisher/subscriber pairs associated with the OPC UA node.</span></div>
-<div class="line"><span class="lineno">   38</span>            self._device.getBridge().getMqttClient().publish(mqttTopic, payload=val, qos=1, retain=<span class="keyword">False</span>) <span class="comment"># Publishes the new value in the OPC UA server to each of the MQTT topics.</span></div>
-<div class="line"><span class="lineno">   39</span> </div>
+<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00021">21</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    <span class="keyword">async def </span>datachange_notification(self, node: Node, val, data: ua.DataChangeNotification):</div>
+<div class="line"><span class="lineno">   22</span>        nodeName = await node.read_browse_name() </div>
+<div class="line"><span class="lineno">   23</span>        print(f<span class="stringliteral">&quot;OPC UA CHANGE ON NODE: {nodeName.Name}: {val}&quot;</span>)</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">for</span> mqttTopic <span class="keywordflow">in</span> self._device.getPubSubPairs()[node]: <span class="comment"># Iterates through the MQTT topics stored in the device&#39;s set of publisher/subscriber pairs associated with the OPC UA node.</span></div>
+<div class="line"><span class="lineno">   25</span>            self._device.getBridge().getMqttClient().publish(mqttTopic, payload=val, qos=1, retain=<span class="keyword">False</span>) <span class="comment"># Publishes the new value in the OPC UA server to each of the MQTT topics.</span></div>
+<div class="line"><span class="lineno">   26</span>        </div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a1215f020b9e014b138dfd7fe90396ea3" name="a1215f020b9e014b138dfd7fe90396ea3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1215f020b9e014b138dfd7fe90396ea3">&#9670;&#160;</a></span>event_notification()</h2>
+<a id="a0854dc26ebd8b4c4fa03985ffa5d5f13" name="a0854dc26ebd8b4c4fa03985ffa5d5f13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0854dc26ebd8b4c4fa03985ffa5d5f13">&#9670;&#160;</a></span>event_notification()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,24 +248,24 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Handles event notifications from the OPC UA server. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Asynchronous callback for event notifications in the OPC UA server. </p>
+<p>This method is called when an event is triggered in the OPC UA server. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>The event notification from the OPC UA server </td></tr>
+    <tr><td class="paramname">event</td><td>An instance of the EventNotificationList class from the asyncua module, which represents the event. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00044">44</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>    <span class="keyword">async def </span>event_notification(self, event: ua.EventNotificationList):</div>
-<div class="line"><span class="lineno">   45</span>        print(f<span class="stringliteral">&quot;Event: {event}&quot;</span>)</div>
-<div class="line"><span class="lineno">   46</span> </div>
+<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00030">30</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>    <span class="keyword">async def </span>event_notification(self, event: ua.EventNotificationList):</div>
+<div class="line"><span class="lineno">   31</span>        print(f<span class="stringliteral">&quot;Event: {event}&quot;</span>)</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span> </div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a020a568d5659c01fa24db0c6f214dbcd" name="a020a568d5659c01fa24db0c6f214dbcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a020a568d5659c01fa24db0c6f214dbcd">&#9670;&#160;</a></span>getDevice()</h2>
+<a id="ab07cfd433d73d09411c8a8e0dc5bba7a" name="ab07cfd433d73d09411c8a8e0dc5bba7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab07cfd433d73d09411c8a8e0dc5bba7a">&#9670;&#160;</a></span>getDevice()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -283,13 +280,13 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the device associated with this OPC UA callback handler. </p>
-<dl class="section return"><dt>Returns</dt><dd>The device associated with this OPC UA callback handler </dd></dl>
+<p>Getter method for the Device object associated with this callback. </p>
+<dl class="section return"><dt>Returns</dt><dd>Device object The current Device instance. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00025">25</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>    <span class="keyword">def </span>getDevice(self):</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> self._device</div>
-<div class="line"><span class="lineno">   27</span> </div>
+<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00012">12</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    <span class="keyword">def </span>getDevice(self):</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">return</span> self._device</div>
+<div class="line"><span class="lineno">   14</span>    </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -314,9 +311,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>A reference to the device associated with this OPC UA callback handler. </p>
-
-<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00020">20</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="devices_8py_source.html#l00008">8</a> of file <a class="el" href="devices_8py_source.html">devices.py</a>.</p>
 
 </div>
 </div>
